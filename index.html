@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
     <!-- Js file link -->
-    <script src="JS/script.js"></script>
+    <script defer src="JS/script.js"></script>
     <!-- Tailwind & Daisy Ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -24,16 +24,13 @@
             <p class="text-xl mb-2">Enter Amount</p>
             <input type="text" class="w-full border-gray-300 rounded-lg h-10 outline-none pl-3 mb-8" id="input-field" placeholder="Enter Your Amount">
         </div>
-        <div class="flex justify-between items-center">
-            <div class="dropdown">
+        <div class="dropdown flex justify-between items-center">
+            <div class="">
                 <p>From</p>
-                <div class="flex border  border-gray-200 p-2 rounded-lg">
+                <div class="flex border border-gray-200 p-2 rounded-lg">
                     <img class="w-8" src="https://flagsapi.com/US/flat/64.png">
-                    <select class="border-none outline-none font-semibold">
-                        <option>USD</option>
-                        <option>EUR</option>
-                        <option>AUD</option>
-                        <option>JPN</option>
+                    <select class="select-container border-none outline-none font-semibold">
+                        
                     </select>
                 </div>
                 
@@ -41,21 +38,18 @@
 
         <i class="fa-solid fa-arrow-right-arrow-left text-xl"></i>
 
-            <div class="dropdown">
+            <div class="">
                 <p>To</p>
-                <div class="flex border  border-gray-200 p-2 rounded-lg">
+                <div class=" flex border border-gray-200 p-2 rounded-lg">
                     <img class="w-8" src="https://flagsapi.com/BD/flat/64.png">
-                    <select class="border-none outline-none font-semibold">
-                        <option>BAN</option>
-                        <option>USD</option>
-                        <option>EUR</option>
-                        <option>AUD</option>
+                    <select class="select-container border-none outline-none font-semibold">
+                        
                     </select>
                 </div>
             </div>
         </div>
         <div class="text-center">
-            <p class="my-6 text-sm font-bold bg-gray-600 text-white inline-block p-1 rounded-md">1 USD = 120 BDT</p>
+            <p id="exchange-rate" class="my-6 text-sm font-bold bg-gray-600 text-white inline-block p-1 rounded-md">1 USD = 120 BDT</p>
         </div>
         <button class="btn bg-[#c1121f] text-white rounded-lg">Get Exchange Rate</button>
         </div>
